@@ -39,5 +39,11 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
         modified:   hello_world.py
+        
+6. git add to stage the changes
+git add hello_world.py
+
+7. git commit -m "Changed Hello World to Git is awesome!"
+[master 1a2b3c4] Changed Hello World to Git is awesome!
 
 """
