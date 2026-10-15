@@ -116,4 +116,25 @@ Date:   Fri Oct 2 17:19:49 2026 +0200
     
 9. Screenshot of the git log command output uploaded.
 
+10. Comments addressed - Resubmission
+
+The git-task folder was showing as a link on GitHub because it had its own .git folder inside my main repo. This is how I fixed it:
+
+git rm --cached git-task
+Removed git-task from the main repo so it is not tracked as a link anymore. The folder is still on my laptop.
+
+zip -r git-task.zip git-task -x "*.DS_Store"
+Zipped the git-task folder. The .git folder is inside the zip so the commit history is still there.
+
+git add git-task.zip example-repo.txt
+Added the zip file and example-repo.txt to the task folder.
+example-repo.txt has the link to my public repo https://github.com/RockSphe/example-repo
+
+git config --global user.name "Siphesihle Khumalo"
+git config --global user.email "siphesihle2021@gmail.com"
+Set my name and email so my commits show my details.
+
+git commit -m "Replace git-task submodule link with zip file and add example-repo.txt"
+git push
+Pushed everything to GitHub. The zip and txt file can now be opened and downloaded.
 """
